@@ -1,0 +1,1988 @@
+{
+	"info": {
+		"_postman_id": "b4671d7f-ddb7-4b04-9ba8-375224958c33",
+		"name": "Books Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39442234"
+	},
+	"item": [
+		{
+			"name": "BooksService",
+			"item": [
+				{
+					"name": "GetBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Nov 2024 04:40:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Books\": [\n        {\n            \"id\": \"f42c0b8c-fa4c-463c-81a5-37fda3cac5b1\",\n            \"title\": \"Orgullo y prejuicio\",\n            \"author\": \"Jane Austen\",\n            \"category\": \"Literatura Clásica\",\n            \"price\": 150,\n            \"stock\": 10\n        },\n        {\n            \"id\": \"03bd8943-ab32-4d49-8695-1f92d6785aa5\",\n            \"title\": \"1984\",\n            \"author\": \"George Orwell\",\n            \"category\": \"Ciencia Ficción\",\n            \"price\": 140,\n            \"stock\": 18\n        },\n        {\n            \"id\": \"9bb25808-baef-4d61-93a9-58a74081d2ae\",\n            \"title\": \"El principito\",\n            \"author\": \"Antoine de Saint-Exupéry\",\n            \"category\": \"Literatura Infantil\",\n            \"price\": 90,\n            \"stock\": 25\n        },\n        {\n            \"id\": \"1f0ee29b-da0c-4f5a-a3c7-90f1d5718c32\",\n            \"title\": \"Crimen y castigo\",\n            \"author\": \"Fiódor Dostoyevski\",\n            \"category\": \"Literatura Rusa\",\n            \"price\": 200,\n            \"stock\": 12\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetBookbyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/books/f42c0b8c-fa4c-463c-81a5-37fda3cac5b1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"f42c0b8c-fa4c-463c-81a5-37fda3cac5b1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/books/f42c0b8c-fa4c-463c-81a5-37fda3cac5b1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"f42c0b8c-fa4c-463c-81a5-37fda3cac5b1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 20:55:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Book\": {\n        \"id\": \"f42c0b8c-fa4c-463c-81a5-37fda3cac5b1\",\n        \"title\": \"Orgullo y prejuicio\",\n        \"author\": \"Jane Austen\",\n        \"category\": \"Literatura Clásica\",\n        \"price\": 150,\n        \"stock\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Mis días en la librería de Morisaki\",\r\n    \"author\": \"Satoshi Yagisawa\",\r\n    \"category\": \"Literatura Universal\",\r\n    \"price\": 120.00,\r\n    \"stock\": 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Item inserted successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Mis días en la librería de Morisaki\",\r\n    \"author\": \"Satoshi Yagisawa\",\r\n    \"category\": \"Literatura Universal\",\r\n    \"price\": 120.00,\r\n    \"stock\": 15\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Nov 2024 04:48:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Item inserted successfully\",\n    \"Book\": {\n        \"id\": \"7243c68e-5854-4b07-acf2-3f15b248378c\",\n        \"title\": \"Mis días en la librería de Morisaki\",\n        \"author\": \"Satoshi Yagisawa\",\n        \"category\": \"Literatura Universal\",\n        \"price\": 120,\n        \"stock\": 15\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateBook",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Mis días en la librería de Morisaki\",\r\n    \"author\": \"Satoshi Yagisawa\",\r\n    \"category\": \"Literatura Universal\",\r\n    \"price\": 115.00,\r\n    \"stock\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/books/7243c68e-5854-4b07-acf2-3f15b248378c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"7243c68e-5854-4b07-acf2-3f15b248378c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Book updated successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Mis días en la librería de Morisaki\",\r\n    \"author\": \"Satoshi Yagisawa\",\r\n    \"category\": \"Literatura Universal\",\r\n    \"price\": 115.00,\r\n    \"stock\": 30\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/books/7243c68e-5854-4b07-acf2-3f15b248378c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"7243c68e-5854-4b07-acf2-3f15b248378c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Nov 2024 04:50:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Book updated successfully\",\n    \"UpdatedBook\": {\n        \"id\": \"7243c68e-5854-4b07-acf2-3f15b248378c\",\n        \"title\": \"Mis días en la librería de Morisaki\",\n        \"author\": \"Satoshi Yagisawa\",\n        \"category\": \"Literatura Universal\",\n        \"price\": 115,\n        \"stock\": 30\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteBook",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/books/7243c68e-5854-4b07-acf2-3f15b248378c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"7243c68e-5854-4b07-acf2-3f15b248378c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Book deleted successfully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/books/7243c68e-5854-4b07-acf2-3f15b248378c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"7243c68e-5854-4b07-acf2-3f15b248378c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Nov 2024 04:52:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Book deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "AuthorsService",
+			"item": [
+				{
+					"name": "GetAuthors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Authors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 20:58:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Authors\": [\n        {\n            \"id\": \"fef7b1ee-b3ed-4be4-a6bd-dbd23e3b688a\",\n            \"name\": \"Jane Austen\",\n            \"nationality\": \"Reino Unido\"\n        },\n        {\n            \"id\": \"e42a0902-4886-45d3-aa83-2c00e43b503c\",\n            \"name\": \"George Orwell\",\n            \"nationality\": \"Reino Unido\"\n        },\n        {\n            \"id\": \"c92e5423-c925-4d6b-86c9-660befe74bc4\",\n            \"name\": \"Antoine de Saint-Exupéry\",\n            \"nationality\": \"Francia\"\n        },\n        {\n            \"id\": \"3013306b-7c26-4b2c-9b6d-c479c36b6947\",\n            \"name\": \"Fiódor Dostoyevski\",\n            \"nationality\": \"Rusia\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAuthorbyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/authors/3013306b-7c26-4b2c-9b6d-c479c36b6947",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"authors",
+								"3013306b-7c26-4b2c-9b6d-c479c36b6947"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Author",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/authors/3013306b-7c26-4b2c-9b6d-c479c36b6947",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors",
+										"3013306b-7c26-4b2c-9b6d-c479c36b6947"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 20:59:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Author\": {\n        \"id\": \"3013306b-7c26-4b2c-9b6d-c479c36b6947\",\n        \"name\": \"Fiódor Dostoyevski\",\n        \"nationality\": \"Rusia\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateAuthor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Satoshi Yagisawa\",\r\n    \"nationality\": \"Japón\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Item inserted successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Satoshi Yagisawa\",\r\n    \"nationality\": \"Japón\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:00:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Item inserted successfully\",\n    \"Author\": {\n        \"id\": \"8e9de699-f5d8-46a4-9601-cca4950af346\",\n        \"name\": \"Satoshi Yagisawa\",\n        \"nationality\": \"Japón\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateAuthor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Satoshi Yagisawa\",\r\n    \"nationality\": \"Tokio, Japón\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/authors/8e9de699-f5d8-46a4-9601-cca4950af346",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"authors",
+								"8e9de699-f5d8-46a4-9601-cca4950af346"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Author updated successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Satoshi Yagisawa\",\r\n    \"nationality\": \"Tokio, Japón\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/authors/8e9de699-f5d8-46a4-9601-cca4950af346",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors",
+										"8e9de699-f5d8-46a4-9601-cca4950af346"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:04:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Author updated successfully\",\n    \"UpdatedAuthor\": {\n        \"id\": \"8e9de699-f5d8-46a4-9601-cca4950af346\",\n        \"name\": \"Satoshi Yagisawa\",\n        \"nationality\": \"Tokio, Japón\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteAuthor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/authors/8e9de699-f5d8-46a4-9601-cca4950af346",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"authors",
+								"8e9de699-f5d8-46a4-9601-cca4950af346"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Author deleted successfully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/authors/8e9de699-f5d8-46a4-9601-cca4950af346",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authors",
+										"8e9de699-f5d8-46a4-9601-cca4950af346"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:05:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Author deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CategoriesService",
+			"item": [
+				{
+					"name": "GetCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:07:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Categories\": [\n        {\n            \"id\": \"98bd76d4-1ccc-4de5-ac6b-4889a23dfddd\",\n            \"name\": \"Literatura Clásica\",\n            \"description\": \"Obras emblemáticas de la literatura que han resistido el paso del tiempo y siguen siendo influyentes\"\n        },\n        {\n            \"id\": \"a07ad86d-0556-4a0a-a7ad-63bb3e694833\",\n            \"name\": \"Ciencia Ficción\",\n            \"description\": \"Historias que exploran avances científicos y tecnológicos, a menudo con implicaciones sociales y filosóficas\"\n        },\n        {\n            \"id\": \"82a45bf5-003e-479f-9a8c-2afe93d8608c\",\n            \"name\": \"Literatura Infantil\",\n            \"description\": \"Libros orientados a un público joven, con temas accesibles y frecuentemente educativos\"\n        },\n        {\n            \"id\": \"51226f58-4b88-4274-aa92-d27a7af7c01b\",\n            \"name\": \"Literatura Rusa\",\n            \"description\": \"Obras producidas por escritores rusos, conocidas por su profundidad psicológica y reflexiones sobre la sociedad\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetCategorybyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/categories/82a45bf5-003e-479f-9a8c-2afe93d8608c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"82a45bf5-003e-479f-9a8c-2afe93d8608c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/categories/82a45bf5-003e-479f-9a8c-2afe93d8608c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"82a45bf5-003e-479f-9a8c-2afe93d8608c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:08:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Category\": {\n        \"id\": \"82a45bf5-003e-479f-9a8c-2afe93d8608c\",\n        \"name\": \"Literatura Infantil\",\n        \"description\": \"Libros orientados a un público joven, con temas accesibles y frecuentemente educativos\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Literatura Universal\",\r\n    \"description\": \"Obras literarias de relevancia mundial, atemporales y representativas de diversas culturas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Category created successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Literatura Universal\",\r\n    \"description\": \"Obras literarias de relevancia mundial, atemporales y representativas de diversas culturas\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:09:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Category created successfully\",\n    \"Category\": {\n        \"id\": \"de8d9318-22f1-4ceb-9be5-2c242076fbef\",\n        \"name\": \"Literatura Universal\",\n        \"description\": \"Obras literarias de relevancia mundial, atemporales y representativas de diversas culturas\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Literatura Universal\",\r\n    \"description\": \"Clásicos universales de todas las culturas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/categories/de8d9318-22f1-4ceb-9be5-2c242076fbef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"de8d9318-22f1-4ceb-9be5-2c242076fbef"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Category updated successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Literatura Universal\",\r\n    \"description\": \"Clásicos universales de todas las culturas\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/categories/de8d9318-22f1-4ceb-9be5-2c242076fbef",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"de8d9318-22f1-4ceb-9be5-2c242076fbef"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:13:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Category updated successfully\",\n    \"UpdatedCategory\": {\n        \"id\": \"de8d9318-22f1-4ceb-9be5-2c242076fbef\",\n        \"name\": \"Literatura Universal\",\n        \"description\": \"Clásicos universales de todas las culturas\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/categories/de8d9318-22f1-4ceb-9be5-2c242076fbef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"de8d9318-22f1-4ceb-9be5-2c242076fbef"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Category deleted successfully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/categories/de8d9318-22f1-4ceb-9be5-2c242076fbef",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"de8d9318-22f1-4ceb-9be5-2c242076fbef"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:14:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Category deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CustomersService",
+			"item": [
+				{
+					"name": "GetCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Customers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:29:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Customers\": [\n        {\n            \"id\": \"0d0e705b-54f8-47fb-9903-484e556d2a1d\",\n            \"name\": \"Carlos Martínez\",\n            \"email\": \"carlos.martinez@gmail.com\",\n            \"phone\": \"3123456789\"\n        },\n        {\n            \"id\": \"e13cc453-4a90-4dc5-b48c-6dbe57cd7458\",\n            \"name\": \"Ana López\",\n            \"email\": \"ana.lopez@gmail.com\",\n            \"phone\": \"3145678901\"\n        },\n        {\n            \"id\": \"81713680-dd8e-45b9-9c54-89f83cd6a00d\",\n            \"name\": \"Luis Gómez\",\n            \"email\": \"luis.gomez@gmail.com\",\n            \"phone\": \"3156789012\"\n        },\n        {\n            \"id\": \"89e19b6d-66fa-41aa-b972-8fc05611a2af\",\n            \"name\": \"Mariana Torres\",\n            \"email\": \"mariana.torres@gmail.com\",\n            \"phone\": \"3167890123\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetCustomerbyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers/89e19b6d-66fa-41aa-b972-8fc05611a2af",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"89e19b6d-66fa-41aa-b972-8fc05611a2af"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Customer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers/89e19b6d-66fa-41aa-b972-8fc05611a2af",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"89e19b6d-66fa-41aa-b972-8fc05611a2af"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:29:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Customer\": {\n        \"id\": \"89e19b6d-66fa-41aa-b972-8fc05611a2af\",\n        \"name\": \"Mariana Torres\",\n        \"email\": \"mariana.torres@gmail.com\",\n        \"phone\": \"3167890123\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Daniela Silva\",\r\n    \"email\": \"daniela@gmail.com\",\r\n    \"phone\": \"3112524845\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Customer created successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Daniela Silva\",\r\n    \"email\": \"daniela@gmail.com\",\r\n    \"phone\": \"3112524845\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:30:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Customer created successfully\",\n    \"Customer\": {\n        \"id\": \"d41ce1f6-e03a-4bab-8620-32452dd252f0\",\n        \"name\": \"Daniela Silva\",\n        \"email\": \"daniela@gmail.com\",\n        \"phone\": \"3112524845\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Daniela Silva Méndez\",\r\n    \"email\": \"silvadaniela@gmail.com\",\r\n    \"phone\": \"3112524845\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers/d41ce1f6-e03a-4bab-8620-32452dd252f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"d41ce1f6-e03a-4bab-8620-32452dd252f0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Customer updated successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Daniela Silva Méndez\",\r\n    \"email\": \"silvadaniela@gmail.com\",\r\n    \"phone\": \"3112524845\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers/d41ce1f6-e03a-4bab-8620-32452dd252f0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"d41ce1f6-e03a-4bab-8620-32452dd252f0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:32:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Customer updated successfully\",\n    \"UpdatedCustomer\": {\n        \"id\": \"d41ce1f6-e03a-4bab-8620-32452dd252f0\",\n        \"name\": \"Daniela Silva Méndez\",\n        \"email\": \"silvadaniela@gmail.com\",\n        \"phone\": \"3112524845\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteCustomer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers/d41ce1f6-e03a-4bab-8620-32452dd252f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"d41ce1f6-e03a-4bab-8620-32452dd252f0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Customer deleted successfully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers/d41ce1f6-e03a-4bab-8620-32452dd252f0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"d41ce1f6-e03a-4bab-8620-32452dd252f0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:32:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Customer deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "OrdersService",
+			"item": [
+				{
+					"name": "GetOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:33:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Orders\": [\n        {\n            \"id\": \"e3c0ea59-2162-471f-a16f-b80d6008c6b6\",\n            \"customerName\": \"Carlos Martínez\",\n            \"bookName\": \"Orgullo y prejuicio\",\n            \"amount\": 2\n        },\n        {\n            \"id\": \"d178d35b-5dfe-4ea2-a297-a8f076d55316\",\n            \"customerName\": \"Ana López\",\n            \"bookName\": \"1984\",\n            \"amount\": 1\n        },\n        {\n            \"id\": \"75adbc28-3c0e-47a9-8e6e-3b7b12a345d7\",\n            \"customerName\": \"Luis Gómez\",\n            \"bookName\": \"El principito\",\n            \"amount\": 3\n        },\n        {\n            \"id\": \"fc1efbd8-e900-47ce-95bb-5a0839279ca9\",\n            \"customerName\": \"Mariana Torres\",\n            \"bookName\": \"Crimen y castigo\",\n            \"amount\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetOrderbyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/e3c0ea59-2162-471f-a16f-b80d6008c6b6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"e3c0ea59-2162-471f-a16f-b80d6008c6b6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/orders/e3c0ea59-2162-471f-a16f-b80d6008c6b6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"e3c0ea59-2162-471f-a16f-b80d6008c6b6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:34:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Order\": {\n        \"id\": \"e3c0ea59-2162-471f-a16f-b80d6008c6b6\",\n        \"customerName\": \"Carlos Martínez\",\n        \"bookName\": \"Orgullo y prejuicio\",\n        \"amount\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Mariana Torres\",\r\n    \"bookName\": \"Orgullo y prejuicio\",\r\n    \"amount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Order created successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customerName\": \"Mariana Torres\",\r\n    \"bookName\": \"Orgullo y prejuicio\",\r\n    \"amount\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:36:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Order created successfully\",\n    \"Order\": {\n        \"id\": \"5d1ec259-6c4e-44b1-9cad-3b2f4805eb57\",\n        \"customerName\": \"Mariana Torres\",\n        \"bookName\": \"Orgullo y prejuicio\",\n        \"amount\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Mariana Torres\",\r\n    \"bookName\": \"Orgullo y prejuicio\",\r\n    \"amount\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/5d1ec259-6c4e-44b1-9cad-3b2f4805eb57",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"5d1ec259-6c4e-44b1-9cad-3b2f4805eb57"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Order updated successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customerName\": \"Mariana Torres\",\r\n    \"bookName\": \"Orgullo y prejuicio\",\r\n    \"amount\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/orders/5d1ec259-6c4e-44b1-9cad-3b2f4805eb57",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"5d1ec259-6c4e-44b1-9cad-3b2f4805eb57"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:37:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Order updated successfully\",\n    \"UpdatedOrder\": {\n        \"id\": \"5d1ec259-6c4e-44b1-9cad-3b2f4805eb57\",\n        \"customerName\": \"Mariana Torres\",\n        \"bookName\": \"Orgullo y prejuicio\",\n        \"amount\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/5d1ec259-6c4e-44b1-9cad-3b2f4805eb57",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"5d1ec259-6c4e-44b1-9cad-3b2f4805eb57"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Order deleted successfully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/orders/5d1ec259-6c4e-44b1-9cad-3b2f4805eb57",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"5d1ec259-6c4e-44b1-9cad-3b2f4805eb57"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Nov 2024 21:38:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Order deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

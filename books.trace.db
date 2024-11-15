@@ -1,0 +1,102 @@
+2024-11-13 16:01:42.891226-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Satoshi Yagisawa' (BOOKS_ENTITY_COPY_3_0: ""AUTHOR_ID"" UUID)"
+Data conversion error converting "'Satoshi Yagisawa' (BOOKS_ENTITY_COPY_3_0: ""AUTHOR_ID"" UUID)"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_ENTITY_COPY_3_0"("ID", "AUTHOR_ID", "CATEGORY_ID", "PRICE", "STOCK", "TITLE") OVERRIDING SYSTEM VALUE SELECT "ID", "AUTHOR_ID", "CATEGORY_ID", "PRICE", "STOCK", "TITLE" FROM "PUBLIC"."BOOKS_ENTITY" [22018-224]
+2024-11-13 16:01:42.907760-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Literatura Universal' (BOOKS_ENTITY_COPY_3_1: ""CATEGORY_ID"" UUID)"
+Data conversion error converting "'Literatura Universal' (BOOKS_ENTITY_COPY_3_1: ""CATEGORY_ID"" UUID)"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_ENTITY_COPY_3_1"("ID", "AUTHOR_ID", "CATEGORY_ID", "PRICE", "STOCK", "TITLE") OVERRIDING SYSTEM VALUE SELECT "ID", "AUTHOR_ID", "CATEGORY_ID", "PRICE", "STOCK", "TITLE" FROM "PUBLIC"."BOOKS_ENTITY" [22018-224]
+2024-11-13 16:01:42.920171-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "Satoshi Yagisawa"
+Data conversion error converting "Satoshi Yagisawa"; SQL statement:
+alter table if exists books_entity add constraint FK7sgfx2v4uke6tgd1j79gjvi5e foreign key (author_id) references authors_entity [22018-224]
+2024-11-13 16:01:50.713902-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "Satoshi Yagisawa"
+Data conversion error converting "Satoshi Yagisawa" [22018-224]
+2024-11-13 16:02:36.781447-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "Satoshi Yagisawa"
+Data conversion error converting "Satoshi Yagisawa" [22018-224]
+2024-11-13 16:33:12.670819-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'f333ec0f-2cd0-4a82-ba79-d2d5eae1a87' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"
+Data conversion error converting "'f333ec0f-2cd0-4a82-ba79-d2d5eae1a87' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"; SQL statement:
+update books_entity set author_id=?,category_id=?,price=?,stock=?,title=? where id=? [22018-224]
+2024-11-13 16:33:56.630290-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'f333ec0f-2cd0-4a82-ba79-d2d5eae1a87' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"
+Data conversion error converting "'f333ec0f-2cd0-4a82-ba79-d2d5eae1a87' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"; SQL statement:
+update books_entity set author_id=?,category_id=?,price=?,stock=?,title=? where id=? [22018-224]
+2024-11-13 16:34:50.988047-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"
+Data conversion error converting "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"; SQL statement:
+insert into books_entity (author_id,category_id,price,stock,title,id) values (?,?,?,?,?,?) [22018-224]
+2024-11-13 16:35:36.525868-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"
+Data conversion error converting "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"; SQL statement:
+insert into books_entity (author_id,category_id,price,stock,title,id) values (?,?,?,?,?,?) [22018-224]
+2024-11-13 16:37:01.832408-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"
+Data conversion error converting "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"; SQL statement:
+insert into books_entity (author_id,category_id,price,stock,title,id) values (?,?,?,?,?,?) [22018-224]
+2024-11-13 16:38:49.060424-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"
+Data conversion error converting "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"; SQL statement:
+insert into books_entity (author_id,category_id,price,stock,title,id) values (?,?,?,?,?,?) [22018-224]
+2024-11-13 16:40:40.799193-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"
+Data conversion error converting "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"; SQL statement:
+insert into books_entity (author_id,category_id,price,stock,title,id) values (?,?,?,?,?,?) [22018-224]
+2024-11-13 16:43:28.801938-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"
+Data conversion error converting "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"; SQL statement:
+insert into books_entity (author_id,category_id,price,stock,title,id) values (?,?,?,?,?,?) [22018-224]
+2024-11-13 16:47:43.192291-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"
+Data conversion error converting "'Satoshi Yagisawa' (AUTHORS_ENTITY: ""ID"" UUID NOT NULL)"; SQL statement:
+insert into books_entity (author_id,category_id,price,stock,title,id) values (?,?,?,?,?,?) [22018-224]
+2024-11-13 23:41:39.552399-05:00 jdbc[26]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:724)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:703)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 16 more
+2024-11-14 00:11:18.088810-05:00 jdbc[37]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:724)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:703)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 16 more

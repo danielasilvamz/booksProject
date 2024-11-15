@@ -18,9 +18,9 @@ import java.util.UUID;
 public class OrdersEntity {
     @Id
     private UUID id;
-    private String customerId;
-    private String BookId;
-    private int Amount;
+    private String customerName;
+    private String bookName;
+    private int amount;
 
     @PrePersist
     public void generateUUID() {
@@ -32,8 +32,8 @@ public class OrdersEntity {
 
 /*
 {
-    "customerId": "a917b400-a1ae-4e2b-aff2-8b288034a671",
-    "bookId": "a917b400-a1ae-4e2b-aff2-8b288034a671",
+    "customerName": "Daniela Silva",
+    "bookName": "Mis días en la librería de Morisaki",
     "amount": 2
 }
  */

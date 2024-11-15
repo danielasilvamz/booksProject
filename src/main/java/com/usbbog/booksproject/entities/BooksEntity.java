@@ -21,8 +21,8 @@ public class BooksEntity {
     @Id
     private UUID id;
     private String title;
-    private String authorId;
-    private String categoryId;
+    private String author;
+    private String category;
     private double price;
     private int stock;
 
@@ -37,8 +37,8 @@ public class BooksEntity {
 /*
 {
     "title": "Mis días en la librería de Morisaki",
-    "authorId": "Satoshi Yagisawa",
-    "categoryId": "Literatura Universal",
+    "author": "Satoshi Yagisawa",
+    "category": "Literatura Universal",
     "price": 120.00,
     "stock": 15
 }

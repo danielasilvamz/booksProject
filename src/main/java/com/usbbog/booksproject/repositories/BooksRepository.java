@@ -8,4 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface BooksRepository extends JpaRepository<BooksEntity, UUID> {
+    //clase de jpa: tiene todas las consultas completas
 }

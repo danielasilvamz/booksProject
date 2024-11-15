@@ -12,15 +12,18 @@ import java.util.*;
 @Service
 public class BooksService {
     @Autowired
+    //uso de base de datos con ORM
     private BooksRepository booksRepository;
 
+    // findAll() -> select * from tabla -> lo entrega formateada
+    // el metodo se actualiza cada vez que se hagan cambios en la BD
     public ResponseEntity<Map<String, Object>> getAllBooks() {
         Map<String, Object> response = new HashMap<>();
         List<BooksEntity> booksList = booksRepository.findAll();
         response.put("Books", booksList);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-
+    // Optional -> si retorna nulos no crea error
     public ResponseEntity<Map<String, Object>> getBookById(UUID id) {
         Map<String, Object> response = new HashMap<>();
         Optional<BooksEntity> bookFound = booksRepository.findById(id);
@@ -53,8 +56,8 @@ public class BooksService {
         if (bookFound.isPresent()) {
             BooksEntity existingBook = bookFound.get();
             existingBook.setTitle(book.getTitle());
-            existingBook.setAuthorId(book.getAuthorId());
-            existingBook.setCategoryId(book.getCategoryId());
+            existingBook.setAuthor(book.getAuthor());
+            existingBook.setCategory(book.getCategory());
             existingBook.setPrice(book.getPrice());
             existingBook.setStock(book.getStock());
             booksRepository.save(existingBook);

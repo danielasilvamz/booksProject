@@ -52,8 +52,8 @@ public class OrdersService {
         Optional<OrdersEntity> orderFound = ordersRepository.findById(id);
         if (orderFound.isPresent()) {
             OrdersEntity existingOrder = orderFound.get();
-            existingOrder.setCustomerId(order.getCustomerId());
-            existingOrder.setBookId(order.getBookId());
+            existingOrder.setCustomerName(order.getCustomerName());
+            existingOrder.setBookName(order.getBookName());
             existingOrder.setAmount(order.getAmount());
             ordersRepository.save(existingOrder);
             response.put("Status", "Order updated successfully");
